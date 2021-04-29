@@ -1,0 +1,6 @@
+framework module Flexign {
+  umbrella header "Flexign-umbrella.h"
+
+  export *
+  module * { export * }
+}

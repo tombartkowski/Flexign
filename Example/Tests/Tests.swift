@@ -1,5 +1,6 @@
+
 import XCTest
-import Flexign
+@testable import Flexign_Example
 
 class Tests: XCTestCase {
     

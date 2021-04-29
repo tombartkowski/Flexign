@@ -22,7 +22,7 @@ pod 'Flexign'
 
 ## Author
 
-tombartkowski, t-bartkowski@american-systems.pl
+Tomasz Bartkowski
 
 ## License
 

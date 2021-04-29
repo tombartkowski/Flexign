@@ -1,0 +1,6 @@
+framework module Pods_Flexign_Example {
+  umbrella header "Pods-Flexign_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
