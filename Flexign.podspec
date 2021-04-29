@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Flexign'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'Flexible Design System for iOS.'
   s.homepage         = 'https://github.com/tombartkowski/Flexign'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
