@@ -5,7 +5,7 @@
 //  Created by Tomasz Bartkowski on 28/04/2021.
 //
 
-extension UIColor.system {
+public extension UIColor.system {
     static var label: UIColor {
         if #available(iOS 13.0, *) {
             return .label
@@ -29,6 +29,15 @@ extension UIColor.system {
         } else {
             return UIColor(red: 0.24, green: 0.24, blue: 0.26, alpha: 1.00) // #3C3C43
                 .withAlphaComponent(0.3)
+        }
+    }
+    
+    static var quaternaryLabel: UIColor {
+        if #available(iOS 13.0, *) {
+            return .quaternaryLabel
+        } else {
+            return UIColor(red: 0.24, green: 0.24, blue: 0.26, alpha: 1.00) // #3C3C43
+                .withAlphaComponent(0.18)
         }
     }
 }

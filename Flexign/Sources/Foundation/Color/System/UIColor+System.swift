@@ -5,6 +5,6 @@
 //  Created by Tomasz Bartkowski on 28/04/2021.
 //
 
-extension UIColor {
+public extension UIColor {
     enum system {}
 }

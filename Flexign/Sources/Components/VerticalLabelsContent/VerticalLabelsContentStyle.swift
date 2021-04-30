@@ -6,7 +6,7 @@
 //
 
 public struct VerticalLabelsContentStyle {
-    init(
+    public init(
         viewStyle: ViewStyle? = nil,
         topLabelStyle: LabelStyle? = nil,
         bottomLabelStyle: LabelStyle? = nil,

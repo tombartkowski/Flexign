@@ -5,7 +5,7 @@
 //  Created by Tomasz Bartkowski on 28/04/2021.
 //
 
-extension UIColor.system {
+public extension UIColor.system {
     static var separator: UIColor {
         if #available(iOS 13.0, *) {
             return .separator

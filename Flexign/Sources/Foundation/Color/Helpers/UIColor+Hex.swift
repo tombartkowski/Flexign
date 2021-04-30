@@ -5,8 +5,8 @@
 //  Created by Tomasz Bartkowski on 28/04/2021.
 //
 
-extension UIColor {
-    convenience init?(hex: String) {
+public extension UIColor {
+    public convenience init?(hex: String) {
         if hex.hasPrefix("#") {
             let start = hex.index(hex.startIndex, offsetBy: 1)
             let hexColor = String(hex[start...])

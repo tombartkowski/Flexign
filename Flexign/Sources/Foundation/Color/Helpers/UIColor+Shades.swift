@@ -5,12 +5,12 @@
 //  Created by Tomasz Bartkowski on 28/04/2021.
 //
 
-extension UIColor {
-    func darker(percentage: CGFloat = 0.2) -> UIColor {
+public extension UIColor {
+    public func darker(percentage: CGFloat = 0.2) -> UIColor {
         shaded(amount: percentage)
     }
 
-    func lighter(percentage: CGFloat = 0.4) -> UIColor {
+    public func lighter(percentage: CGFloat = 0.4) -> UIColor {
         tinted(amount: percentage)
     }
     

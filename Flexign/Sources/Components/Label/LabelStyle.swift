@@ -8,7 +8,7 @@
 public struct LabelStyle {
     // MARK = Lifecycle
 
-    init(
+    public init(
         viewStyle: ViewStyle? = nil,
         textAlignment: NSTextAlignment? = nil,
         textColor: Colorable? = nil,
