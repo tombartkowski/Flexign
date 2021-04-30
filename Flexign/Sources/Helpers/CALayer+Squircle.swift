@@ -32,7 +32,7 @@ extension CALayer {
         var checkpoint5: CGFloat { return squircleSide / checkpoint5Ratio }
     }
 
-    func squirclePath(for bounds: CGRect) -> UIBezierPath {
+    static func squirclePath(for bounds: CGRect) -> UIBezierPath {
         let width = bounds.width
         let height = bounds.height
         let squircleSide = min(width, height)

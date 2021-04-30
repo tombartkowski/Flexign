@@ -16,11 +16,11 @@ open class Avatar: UIImageView {
         layer.masksToBounds = true
     }
     
-    open override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
-        applyCornerRadius(style?.cornerRadius)
+        updateWithStyle(style: style)
     }
-
+    
     @available(*, unavailable)
     public required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -7,8 +7,8 @@
 
 public extension UIView {
     func applySquircle(for bounds: CGRect) {
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = layer.squirclePath(for: bounds).cgPath
+        let maskLayer: CAShapeLayer = (layer.mask as? CAShapeLayer) ?? CAShapeLayer()
+        maskLayer.path = CALayer.squirclePath(for: bounds).cgPath
         layer.mask = maskLayer
     }
 }

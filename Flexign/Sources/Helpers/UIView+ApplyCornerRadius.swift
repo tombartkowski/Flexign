@@ -22,7 +22,9 @@ extension UIView {
                 layer.cornerRadius = value
             }
         case .full:
-            layer.cornerRadius = bounds.height / 2
+            if layer.cornerRadius != bounds.height / 2 {
+                layer.cornerRadius = bounds.height / 2
+            }
         case .squircle:
             applySquircle(for: bounds)
         default:

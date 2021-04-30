@@ -47,7 +47,7 @@ open class Button: UIButton {
 
     override open func layoutSubviews() {
         super.layoutSubviews()
-        applyCornerRadius(style.viewStyle?.cornerRadius)
+        updateWithStyle(style: style.viewStyle)
     }
 
     // MARK: Fileprivate
@@ -90,7 +90,7 @@ public extension Button {
         } else {
             animator(
                 restoreOriginalBackgroundAnimator,
-                animateTo: (style.viewStyle?.backgroundColor?.uiColor)!,
+                animateTo: style.viewStyle?.backgroundColor?.uiColor ?? .clear,
                 withOppositeAnimator: lightenBackgroundAnimator
             )
         }

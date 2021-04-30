@@ -6,14 +6,6 @@
 //
 
 public extension UIColor {
-    func darker(percentage: CGFloat = 0.2) -> UIColor {
-        shaded(amount: percentage)
-    }
-
-    func lighter(percentage: CGFloat = 0.4) -> UIColor {
-        tinted(amount: percentage)
-    }
-    
     func tinted(amount: CGFloat) -> UIColor {
         var red: CGFloat = 0
         var green: CGFloat = 0

@@ -40,8 +40,8 @@ open class Icon: UIImageView {
 
     override open func layoutSubviews() {
         super.layoutSubviews()
+        updateWithStyle(style: style?.viewStyle)
 
-        applyCornerRadius(style?.viewStyle?.cornerRadius)
         let dimension = style?.size?.value ?? IconStyle.Default.Size.md.value
         let resizedImage = originalImage?
             .imageForSize(CGSize(width: dimension, height: dimension).insetBy(
@@ -52,7 +52,6 @@ open class Icon: UIImageView {
         switch style?.variant {
         case .plain:
             image = resizedImage?.withRenderingMode(.alwaysOriginal)
-            break
         case let .tinted(colorable):
             image = resizedImage?.withRenderingMode(.alwaysTemplate)
             tintColor = colorable.uiColor

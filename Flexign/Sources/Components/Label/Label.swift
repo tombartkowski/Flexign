@@ -21,6 +21,11 @@ open class Label: UILabel {
     public required init?(coder _: NSCoder) {
         fatalError()
     }
+    
+    override open func layoutSubviews() {
+        super.layoutSubviews()
+        updateWithStyle(style: style?.viewStyle)
+    }
 
     // MARK: Open
 
