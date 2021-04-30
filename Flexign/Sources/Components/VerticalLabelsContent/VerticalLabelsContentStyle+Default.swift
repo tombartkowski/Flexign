@@ -9,7 +9,7 @@ public extension VerticalLabelsContentStyle {
         public static let headlineSubheadline = VerticalLabelsContentStyle(
             topLabelStyle: LabelStyle.Default.headline,
             bottomLabelStyle: LabelStyle.Default.subheadline,
-            spacing: Padding.p1.value
+            spacing: Padding.p1
         )
     }
 }

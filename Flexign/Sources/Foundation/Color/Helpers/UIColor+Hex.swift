@@ -6,7 +6,7 @@
 //
 
 public extension UIColor {
-    public convenience init?(hex: String) {
+    convenience init?(hex: String) {
         if hex.hasPrefix("#") {
             let start = hex.index(hex.startIndex, offsetBy: 1)
             let hexColor = String(hex[start...])

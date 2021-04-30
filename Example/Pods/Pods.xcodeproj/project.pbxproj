@@ -37,8 +37,7 @@
 		4D03EF50E3E6B9B5A1F47FC2D32AA6AE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D261481B918DB3060CD3120A54442343 /* Button.swift */; };
 		5171AC5B30643E030610B5EBEAE16781 /* LabelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB671EC4AA64D5A2D6F1B3B9CEDE1742 /* LabelColor.swift */; };
 		5431716410B8A5BDAE73EDC000E91FEE /* ButtonStyle+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AE58BB310AB172CB5BE63963DD6395 /* ButtonStyle+Default.swift */; };
-		5BAD4DE49FA85827698FF504D71341A5 /* Spaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE169017ADA34C034A1B2FD341D8ABA /* Spaceable.swift */; };
-		6295EF5E5CC46B6D198C71B3880E80AE /* BasicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B419FF90891AF195C41BD9FAE99D357 /* BasicColor.swift */; };
+		6295EF5E5CC46B6D198C71B3880E80AE /* UIColor+Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B419FF90891AF195C41BD9FAE99D357 /* UIColor+Colorable.swift */; };
 		65165DF2F88821FD45B76370956FD457 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B182F54A8958F8F7BD5486E4270C98AB /* UIImage+Resize.swift */; };
 		6A3F64DD7D4C46AA6E006CAADFFD7E59 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B9D126B4363141BB0C1CF93C2DA52 /* UILabel+Style.swift */; };
 		6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */; };
@@ -67,7 +66,7 @@
 		B666417FB51EA603682FD465DABDB7D9 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0AB54CE6296522407FA2A16F12D615 /* Avatar.swift */; };
 		B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B769CA320F4FBEBEE2B251239DAB3C04 /* Elevatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E15D7DBD1E0C4E87EE1725C7BFA74 /* Elevatable.swift */; };
-		B77C378A4FB555BE789D453A088F8CE4 /* HorixontalListRowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A113B76BE84E38A1913260383FD468 /* HorixontalListRowStyle.swift */; };
+		B77C378A4FB555BE789D453A088F8CE4 /* HorizontalListRowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A113B76BE84E38A1913260383FD468 /* HorizontalListRowStyle.swift */; };
 		B82210DA22279955737A2B311CCB6445 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02849BC6715EE32241A897685D82AE1 /* CornerRadius.swift */; };
 		BA799670E9D5A20DB6EF42063FEAE4BF /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93574F4CCB73F2983F51A093C317E0D /* Colorable.swift */; };
 		BAAA7BF187CFD1D3021BEFD4959F3960 /* CGPoint+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA4A3E63E044ADEDFA087EE78743E25 /* CGPoint+Delta.swift */; };
@@ -153,7 +152,7 @@
 		41566348A1883EDE4D89D2C2DB5C5514 /* Label.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		465E15D7DBD1E0C4E87EE1725C7BFA74 /* Elevatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Elevatable.swift; sourceTree = "<group>"; };
-		4B419FF90891AF195C41BD9FAE99D357 /* BasicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BasicColor.swift; sourceTree = "<group>"; };
+		4B419FF90891AF195C41BD9FAE99D357 /* UIColor+Colorable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Colorable.swift"; sourceTree = "<group>"; };
 		4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
 		4D3B6A47EFA33B4C33A4280DA601681D /* UIColor+System+Gray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+System+Gray.swift"; sourceTree = "<group>"; };
 		501675424772EE2C282BABF7D2EA2BC0 /* UIButton+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
@@ -162,7 +161,6 @@
 		57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		599BCB4D91C5BBFE1A15183C1B038C0E /* Flexign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flexign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EE169017ADA34C034A1B2FD341D8ABA /* Spaceable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Spaceable.swift; sourceTree = "<group>"; };
 		616D76EC2740A0AFB32B488A9E48B1B6 /* Pods-Flexign_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Flexign_Tests.modulemap"; sourceTree = "<group>"; };
 		64AE58BB310AB172CB5BE63963DD6395 /* ButtonStyle+Default.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+Default.swift"; sourceTree = "<group>"; };
 		656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
@@ -205,7 +203,7 @@
 		AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		AF5C1291D6AA542C9FF85E1F96BA1E0C /* Pods-Flexign_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Flexign_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B041BE62608BF12E771642844CD8DCAA /* Flexign-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Flexign-dummy.m"; sourceTree = "<group>"; };
-		B0A113B76BE84E38A1913260383FD468 /* HorixontalListRowStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HorixontalListRowStyle.swift; sourceTree = "<group>"; };
+		B0A113B76BE84E38A1913260383FD468 /* HorizontalListRowStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HorizontalListRowStyle.swift; sourceTree = "<group>"; };
 		B0CD308BA6024829E4E0166F2580971A /* UIView+Squircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Squircle.swift"; sourceTree = "<group>"; };
 		B0DAA27A0E6949E7D4D3D60F34E5C9D5 /* LabelStyle+Default.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "LabelStyle+Default.swift"; sourceTree = "<group>"; };
 		B126D343B4E02236778CB9D2EE208EE7 /* Pods-Flexign_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Flexign_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -281,7 +279,7 @@
 		01423C29DE4AB2991AD4E4C5926BAF8E /* HorizontalListRow */ = {
 			isa = PBXGroup;
 			children = (
-				B0A113B76BE84E38A1913260383FD468 /* HorixontalListRowStyle.swift */,
+				B0A113B76BE84E38A1913260383FD468 /* HorizontalListRowStyle.swift */,
 				129F327D1DD3CC6F698E187EC0DC307E /* HorizontalListRow.swift */,
 				C611BA0B1D727B732BD4154E59228B12 /* HorizontalListRowStyle+Default.swift */,
 			);
@@ -315,7 +313,6 @@
 			children = (
 				CDDD2A3F536E08DA89F27A509B3E81F0 /* Margin.swift */,
 				31B41BE5D40F0BF3C93EE05BE4FEACAF /* Padding.swift */,
-				5EE169017ADA34C034A1B2FD341D8ABA /* Spaceable.swift */,
 			);
 			path = Spacing;
 			sourceTree = "<group>";
@@ -346,7 +343,7 @@
 		2CB971B007ACBF062F4969EA3814DF74 /* Color */ = {
 			isa = PBXGroup;
 			children = (
-				4B419FF90891AF195C41BD9FAE99D357 /* BasicColor.swift */,
+				4B419FF90891AF195C41BD9FAE99D357 /* UIColor+Colorable.swift */,
 				F93574F4CCB73F2983F51A093C317E0D /* Colorable.swift */,
 				DB671EC4AA64D5A2D6F1B3B9CEDE1742 /* LabelColor.swift */,
 				FE0F4A4EE58764E46698932BB4E45802 /* Helpers */,
@@ -901,7 +898,7 @@
 				9D496A8B14EB4ACAAE6925CE4FFA5878 /* AnimationCurve.swift in Sources */,
 				71C026C1B35C3920B6594C6D0104D742 /* AnimationDuration.swift in Sources */,
 				B666417FB51EA603682FD465DABDB7D9 /* Avatar.swift in Sources */,
-				6295EF5E5CC46B6D198C71B3880E80AE /* BasicColor.swift in Sources */,
+				6295EF5E5CC46B6D198C71B3880E80AE /* UIColor+Colorable.swift in Sources */,
 				4D03EF50E3E6B9B5A1F47FC2D32AA6AE /* Button.swift in Sources */,
 				5431716410B8A5BDAE73EDC000E91FEE /* ButtonStyle+Default.swift in Sources */,
 				2EAD8A9CBC9C9D1380A3625AE3B2261C /* ButtonStyle.swift in Sources */,
@@ -915,7 +912,7 @@
 				B769CA320F4FBEBEE2B251239DAB3C04 /* Elevatable.swift in Sources */,
 				448ECA69FDDB8496E94CF7CFFB892A35 /* Elevation.swift in Sources */,
 				04A96F5CCC83412DE78E6805C0807CE6 /* Flexign-dummy.m in Sources */,
-				B77C378A4FB555BE789D453A088F8CE4 /* HorixontalListRowStyle.swift in Sources */,
+				B77C378A4FB555BE789D453A088F8CE4 /* HorizontalListRowStyle.swift in Sources */,
 				FE87555E4AF7D1AB24E8D5CF80AEEF5C /* HorizontalListRow.swift in Sources */,
 				8131B890A9CA49B1C3AB0D531348C0E8 /* HorizontalListRowStyle+Default.swift in Sources */,
 				39869A30BB5225BF88868791774FEB59 /* Icon.swift in Sources */,
@@ -931,7 +928,6 @@
 				B13CAA43E013F8BF17984E67A45B7108 /* Separator.swift in Sources */,
 				7348A313D7FBCC93A8C4D3049F9AF422 /* SeparatorStyle.swift in Sources */,
 				D225BC2FF0E06A1140F6FBED6000799A /* Shadow.swift in Sources */,
-				5BAD4DE49FA85827698FF504D71341A5 /* Spaceable.swift in Sources */,
 				35F72A22D1EBBFE5556533D5B957F67F /* TypeRepresentable.swift in Sources */,
 				C4FD402951BC509107D9DE6C942AF3BC /* Typography.swift in Sources */,
 				CC888541944FB74070698C7273E5F904 /* UIButton+Style.swift in Sources */,

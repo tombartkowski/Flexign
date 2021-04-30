@@ -9,26 +9,26 @@ public extension ButtonStyle {
     enum Default {
         public static let filledPrimary = ButtonStyle(
             viewStyle: ViewStyle(
-                backgroundColor: BasicColor.primary,
+                backgroundColor: UIColor.system.blue,
                 cornerRadius: CornerRadius.squircle
             ),
             titleStyle: LabelStyle(
-                textColor: BasicColor.white,
+                textColor: UIColor.white,
                 font: ButtonTypography.button
             ),
-            highlightedColor: BasicColor.primary.lighter(percentage: 0.35)
+            highlightedColor: UIColor.system.blue.lighter(percentage: 0.35)
         )
 
         public static let filledInvertedPrimary = ButtonStyle(
             viewStyle: ViewStyle(
-                backgroundColor: BasicColor.primary.lighter(percentage: 0.8),
+                backgroundColor: UIColor.system.blue.lighter(percentage: 0.8),
                 cornerRadius: CornerRadius.squircle
             ),
             titleStyle: LabelStyle(
-                textColor: BasicColor.primary,
+                textColor: UIColor.system.blue,
                 font: ButtonTypography.button
             ),
-            highlightedColor: BasicColor.primary.lighter(percentage: 0.66)
+            highlightedColor: UIColor.system.blue.lighter(percentage: 0.66)
         )
 
         public static let textPrimary = ButtonStyle(
@@ -37,10 +37,10 @@ public extension ButtonStyle {
                 cornerRadius: CornerRadius.squircle
             ),
             titleStyle: LabelStyle(
-                textColor: BasicColor.primary,
+                textColor: UIColor.system.blue,
                 font: ButtonTypography.button
             ),
-            highlightedColor: BasicColor.primary.lighter(percentage: 0.8)
+            highlightedColor: UIColor.system.blue.lighter(percentage: 0.8)
         )
     }
 }

@@ -9,6 +9,7 @@ public enum LabelColor: Colorable {
     case primary
     case secondary
     case tertiary
+    case quaternary
     
     public var uiColor: UIColor {
         switch self {
@@ -18,6 +19,8 @@ public enum LabelColor: Colorable {
             return UIColor.system.secondaryLabel
         case .tertiary:
             return UIColor.system.tertiaryLabel
+        case .quaternary:
+            return UIColor.system.quaternaryLabel
         }
     }
 }

@@ -34,12 +34,12 @@ public extension IconStyle {
 
         public static let secondarySquircleLg = IconStyle(
             viewStyle: ViewStyle(
-                backgroundColor: BasicColor.primary,
+                backgroundColor: UIColor.system.blue,
                 cornerRadius: CornerRadius.squircle
             ),
             size: Size.lg,
-            variant: .tinted(BasicColor.white),
-            padding: Padding.p2.value
+            variant: .tinted(UIColor.white),
+            padding: Padding.p2
         )
     }
 }

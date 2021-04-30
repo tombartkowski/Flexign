@@ -46,11 +46,11 @@ open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIV
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.topAnchor.constraint(
             equalTo: topAnchor,
-            constant: style?.verticalPadding ?? Padding.p5.value
+            constant: style?.verticalPadding ?? Padding.p3
         ).isActive = true
         bottomAnchor.constraint(
             equalTo: stackView.bottomAnchor,
-            constant: style?.verticalPadding ?? Padding.p5.value
+            constant: style?.verticalPadding ?? Padding.p3
         ).isActive = true
         stackView.leadingAnchor.constraint(
             equalTo: leadingAnchor,
@@ -78,7 +78,7 @@ open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIV
         apply(style: style?.viewStyle)
         separator.apply(style: style?.separatorStyle)
 
-        stackView.spacing = style?.itemsSpacing ?? Padding.p6.value
+        stackView.spacing = style?.itemsSpacing ?? Padding.p6
         var leadingAnchor: NSLayoutXAxisAnchor?
         switch style?.leadingSeparatorPosition {
         case .container(.leading):
@@ -102,7 +102,7 @@ open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIV
         }
 
         var trailingAnchor: NSLayoutXAxisAnchor?
-        switch style?.leadingSeparatorPosition {
+        switch style?.trailingSeparatorPosition {
         case .container(.leading):
             trailingAnchor = self.leadingAnchor
         case .container(.trailing):
@@ -123,7 +123,7 @@ open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIV
             break
         }
         
-        separator.isHidden = style?.separatorVisible ?? true
+        separator.isHidden = !(style?.separatorVisible ?? true)
         separator.removeConstraints(separator.constraints.filter { $0.firstAttribute != .height })
         separator.leadingAnchor.constraint(equalTo: leadingAnchor ?? self.leadingAnchor).isActive = true
         (trailingAnchor ?? self.trailingAnchor).constraint(equalTo: separator.trailingAnchor).isActive = true

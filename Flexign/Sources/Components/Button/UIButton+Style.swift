@@ -15,7 +15,7 @@ public extension UIButton {
             for: .normal
         )
 
-        imageView?.tintColor = style.titleStyle?.textColor?.uiColor ?? BasicColor.primary.uiColor
+        imageView?.tintColor = style.titleStyle?.textColor?.uiColor ?? UIColor.system.blue.uiColor
         if style.imageSide == .right {
             imageEdgeInsets = UIEdgeInsets(top: 1, left: 10, bottom: -1, right: 0)
             semanticContentAttribute = .forceRightToLeft

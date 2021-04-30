@@ -40,6 +40,6 @@ public class VerticalLabelsContent: UIStackView {
         apply(style: style?.viewStyle)
         topLabel.apply(style: style?.topLabelStyle)
         bottomLabel.apply(style: style?.bottomLabelStyle)
-        spacing = style?.spacing ?? Padding.p1.value
+        spacing = style?.spacing ?? Padding.p1
     }
 }
