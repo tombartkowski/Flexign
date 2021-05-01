@@ -12,7 +12,7 @@ public struct ButtonStyle {
         viewStyle: ViewStyle? = nil,
         titleStyle: LabelStyle? = nil,
         imageSide: ImageSide? = nil,
-        highlightedColor: Colorable? = nil,
+        highlightedColor: UIColor? = nil,
         contentInsets: UIEdgeInsets? = nil
     ) {
         self.viewStyle = viewStyle
@@ -33,6 +33,6 @@ public struct ButtonStyle {
     public let titleStyle: LabelStyle?
 
     public let imageSide: ImageSide?
-    public let highlightedColor: Colorable?
+    public let highlightedColor: UIColor?
     public let contentInsets: UIEdgeInsets?
 }

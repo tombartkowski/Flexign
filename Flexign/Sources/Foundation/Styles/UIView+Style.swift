@@ -6,11 +6,10 @@
 
 public extension UIView {
     func apply(style: ViewStyle?) {
-        backgroundColor = style?.backgroundColor?.uiColor ?? .clear
-        layer.borderColor = style?.borderColor?.uiColor.cgColor ?? UIColor.clear.cgColor
+        backgroundColor = style?.backgroundColor ?? .clear
+        layer.borderColor = style?.borderColor?.cgColor ?? UIColor.clear.cgColor
         layer.borderWidth = style?.borderWidth ?? 0
         style?.elevation?.shadow?.apply(to: layer)
         applyCornerRadius(style?.cornerRadius)
-        
     }
 }

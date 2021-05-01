@@ -13,7 +13,7 @@ open class Button: UIButton {
     public init(
         title: String? = nil,
         image: UIImage? = nil,
-        style: ButtonStyle = ButtonStyle.Default.filledPrimary
+        style: ButtonStyle = ButtonStyle.Default.fillPrimary
     ) {
         self.style = style
         super.init(frame: .zero)
@@ -24,7 +24,7 @@ open class Button: UIButton {
             adjustsImageSizeForAccessibilityContentSizeCategory = true
         }
         adjustsImageWhenHighlighted = false
-        setImage(image?.buttonImage(for: ButtonTypography.button), for: .normal)
+        setImage(image?.buttonImage(for: UIFont.default.button), for: .normal)
 
         titleLabel?.adjustsFontForContentSizeCategory = true
         setTitle(title, for: .normal)
@@ -81,7 +81,7 @@ public extension Button {
 
     private func animate(isHighlighted _: Bool) {
         if isHighlighted {
-            let highlightedColor: UIColor = style.highlightedColor?.uiColor ?? .clear
+            let highlightedColor: UIColor = style.highlightedColor ?? .clear
             animator(
                 lightenBackgroundAnimator,
                 animateTo: highlightedColor,
@@ -90,7 +90,7 @@ public extension Button {
         } else {
             animator(
                 restoreOriginalBackgroundAnimator,
-                animateTo: style.viewStyle?.backgroundColor?.uiColor ?? .clear,
+                animateTo: style.viewStyle?.backgroundColor ?? .clear,
                 withOppositeAnimator: lightenBackgroundAnimator
             )
         }

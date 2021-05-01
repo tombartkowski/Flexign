@@ -6,8 +6,8 @@
 //
 
 public extension UIImage {
-    func buttonImage(for typePresentable: TypeRepresentable) -> UIImage {
-        let pointSize = typePresentable.font.pointSize
+    func buttonImage(for font: UIFont) -> UIImage {
+        let pointSize = font.pointSize
         let aspectRatio = self.size.width / self.size.height
         let size = CGSize(width: pointSize * aspectRatio, height: pointSize)
         return imageForSize(size).withRenderingMode(.alwaysTemplate)

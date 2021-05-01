@@ -8,25 +8,25 @@
 public extension LabelStyle {
     enum Default {
         public static let headline = LabelStyle(
-            font: Typography.headline
+            font: UIFont.default.headline
         )
         public static let subheadline = LabelStyle(
-            textColor: LabelColor.secondary,
-            font: Typography.subheadline
+            textColor: .system(.secondaryLabel),
+            font: UIFont.default.subheadline
         )
         public static let paragraph = LabelStyle()
         public static let footnote = LabelStyle(
-            textColor: LabelColor.tertiary,
-            font: Typography.footnote
+            textColor: .system(.tertiaryLabel),
+            font: UIFont.default.footnote
         )
         public static let header1 = LabelStyle(
-            font: Typography.header1
+            font: UIFont.default.header1
         )
         public static let header2 = LabelStyle(
-            font: Typography.header2
+            font: UIFont.default.header2
         )
         public static let header3 = LabelStyle(
-            font: Typography.header3
+            font: UIFont.default.header3
         )
     }
 }

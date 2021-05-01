@@ -11,8 +11,8 @@ public struct ViewStyle {
     // MARK: Lifecycle
 
     public init(
-        backgroundColor: Colorable? = nil,
-        borderColor: Colorable? = nil,
+        backgroundColor: UIColor? = nil,
+        borderColor: UIColor? = nil,
         borderWidth: CGFloat? = nil,
         cornerRadius: CornerRadius? = nil,
         elevation: Elevatable? = nil
@@ -26,11 +26,10 @@ public struct ViewStyle {
 
     // MARK: Public
 
-    public let backgroundColor: Colorable?
-    public let borderColor: Colorable?
+    public let backgroundColor: UIColor?
+    public let borderColor: UIColor?
     public let borderWidth: CGFloat?
     public let cornerRadius: CornerRadius?
     public let elevation: Elevatable?
 }
-
 

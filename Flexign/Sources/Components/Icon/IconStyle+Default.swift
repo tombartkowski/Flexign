@@ -34,7 +34,7 @@ public extension IconStyle {
 
         public static let secondarySquircleLg = IconStyle(
             viewStyle: ViewStyle(
-                backgroundColor: UIColor.system.blue,
+                backgroundColor: .system(.blue),
                 cornerRadius: CornerRadius.squircle
             ),
             size: Size.lg,

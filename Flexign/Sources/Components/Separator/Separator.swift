@@ -27,6 +27,6 @@ open class Separator: UIView {
     // MARK: Public
 
     public func apply(style: SeparatorStyle?) {
-        backgroundColor = style?.backgroundColor?.uiColor ?? UIColor.system.opaqueSeparator
+        backgroundColor = style?.backgroundColor ?? .system(.opaqueSeparator)
     }
 }

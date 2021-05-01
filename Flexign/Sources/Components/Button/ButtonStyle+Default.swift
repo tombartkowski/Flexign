@@ -7,40 +7,28 @@
 
 public extension ButtonStyle {
     enum Default {
-        public static let filledPrimary = ButtonStyle(
-            viewStyle: ViewStyle(
-                backgroundColor: UIColor.system.blue,
-                cornerRadius: CornerRadius.squircle
-            ),
-            titleStyle: LabelStyle(
-                textColor: UIColor.white,
-                font: ButtonTypography.button
-            ),
-            highlightedColor: UIColor.system.blue.lighter(percentage: 0.35)
+        public static let fillPrimary = ButtonStyle(
+            viewStyle: ViewStyle.colored(.system(.blue), cornerRadius: .squircle),
+            titleStyle: LabelStyle.withFont(UIFont.default.button, UIColor.white),
+            highlightedColor: UIColor.system(.blue).highlighted
         )
 
         public static let filledInvertedPrimary = ButtonStyle(
-            viewStyle: ViewStyle(
-                backgroundColor: UIColor.system.blue.lighter(percentage: 0.8),
-                cornerRadius: CornerRadius.squircle
-            ),
+            viewStyle: ViewStyle.colored(UIColor.system(.blue).secondary, cornerRadius: .squircle),
             titleStyle: LabelStyle(
-                textColor: UIColor.system.blue,
-                font: ButtonTypography.button
+                textColor: .system(.blue),
+                font: UIFont.default.button
             ),
-            highlightedColor: UIColor.system.blue.lighter(percentage: 0.66)
+            highlightedColor: UIColor.system(.blue).secondaryHighlighted
         )
 
         public static let textPrimary = ButtonStyle(
-            viewStyle: ViewStyle(
-                backgroundColor: UIColor.clear,
-                cornerRadius: CornerRadius.squircle
-            ),
+            viewStyle: ViewStyle.colored(UIColor.clear, cornerRadius: .squircle),
             titleStyle: LabelStyle(
-                textColor: UIColor.system.blue,
-                font: ButtonTypography.button
+                textColor: .system(.blue),
+                font: UIFont.default.button
             ),
-            highlightedColor: UIColor.system.blue.lighter(percentage: 0.8)
+            highlightedColor: UIColor.system(.blue).secondary
         )
     }
 }

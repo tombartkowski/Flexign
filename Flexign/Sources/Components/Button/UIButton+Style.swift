@@ -11,11 +11,13 @@ public extension UIButton {
 
         titleLabel?.apply(style: style.titleStyle)
         setTitleColor(
-            style.titleStyle?.textColor?.uiColor ?? LabelColor.primary.uiColor,
+            style.titleStyle?.textColor ?? .system(.label),
             for: .normal
         )
+        
+        
 
-        imageView?.tintColor = style.titleStyle?.textColor?.uiColor ?? UIColor.system.blue.uiColor
+        imageView?.tintColor = style.titleStyle?.textColor ?? .system(.blue)
         if style.imageSide == .right {
             imageEdgeInsets = UIEdgeInsets(top: 1, left: 10, bottom: -1, right: 0)
             semanticContentAttribute = .forceRightToLeft

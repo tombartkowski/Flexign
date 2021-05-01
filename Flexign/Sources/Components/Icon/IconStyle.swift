@@ -24,7 +24,7 @@ public struct IconStyle {
 
     public enum Variant {
         case plain
-        case tinted(Colorable)
+        case tinted(UIColor)
     }
 
     public let viewStyle: ViewStyle?

@@ -9,8 +9,8 @@ public extension UILabel {
     func apply(style: LabelStyle?) {
         apply(style: style?.viewStyle)
         textAlignment = style?.textAlignment ?? .left
-        textColor = style?.textColor?.uiColor ?? LabelColor.primary.uiColor
-        font = style?.font?.font ?? Typography.paragraph.font
+        textColor = style?.textColor ?? .system(.label)
+        font = style?.font ?? UIFont.default.paragraph
         numberOfLines = style?.numberOfLines ?? 0
     }
 }

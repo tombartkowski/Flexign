@@ -52,9 +52,9 @@ open class Icon: UIImageView {
         switch style?.variant {
         case .plain:
             image = resizedImage?.withRenderingMode(.alwaysOriginal)
-        case let .tinted(colorable):
+        case let .tinted(UIColor):
             image = resizedImage?.withRenderingMode(.alwaysTemplate)
-            tintColor = colorable.uiColor
+            tintColor = UIColor
         default:
             break
         }

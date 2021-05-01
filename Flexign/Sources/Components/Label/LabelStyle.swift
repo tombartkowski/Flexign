@@ -11,13 +11,13 @@ public struct LabelStyle {
     public init(
         viewStyle: ViewStyle? = nil,
         textAlignment: NSTextAlignment? = nil,
-        textColor: Colorable? = nil,
+        textColor: UIColor? = nil,
         numberOfLines: Int? = nil,
-        font: TypeRepresentable? = nil
+        font: UIFont? = nil
     ) {
         self.viewStyle = viewStyle
         self.textAlignment = textAlignment
-        self.textColor = textColor
+        self.textColor = .system(.label)
         self.numberOfLines = numberOfLines
         self.font = font
     }
@@ -27,7 +27,7 @@ public struct LabelStyle {
     public let viewStyle: ViewStyle?
 
     public let textAlignment: NSTextAlignment?
-    public let textColor: Colorable?
+    public let textColor: UIColor?
     public let numberOfLines: Int?
-    public let font: TypeRepresentable?
+    public let font: UIFont?
 }
