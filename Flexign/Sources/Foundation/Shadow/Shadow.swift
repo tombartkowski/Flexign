@@ -16,16 +16,14 @@ public struct Shadow {
 
     // MARK: Public
 
+    public let color: UIColor
+    public let offset: CGSize
+    public let blur: CGFloat
+
     public func apply(to layer: CALayer) {
         layer.shadowColor = color.cgColor
         layer.shadowOffset = offset
         layer.shadowRadius = blur
         layer.shadowOpacity = 1
     }
-
-    // MARK: Internal
-
-    let color: UIColor
-    let offset: CGSize
-    let blur: CGFloat
 }

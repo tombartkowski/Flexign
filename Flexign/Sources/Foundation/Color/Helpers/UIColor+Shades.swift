@@ -48,9 +48,9 @@ public extension UIColor {
             return UIColor.init {  (traitCollection: UITraitCollection) -> UIColor in
                 if traitCollection.userInterfaceStyle == .dark {
                     return UIColor(
-                        red: red + (1.0 - red) * amount,
-                        green: green + (1.0 - green) * amount,
-                        blue: blue + (1.0 - blue) * amount,
+                        red: red + (1.0 - red) * (1-amount),
+                        green: green + (1.0 - green) * (1-amount),
+                        blue: blue + (1.0 - blue) * (1-amount),
                         alpha: alpha
                     )
                 }
@@ -71,7 +71,20 @@ public extension UIColor {
                 alpha: alpha
             )
         }
+    }
+    
+    public func isLight(threshold: Float = 700) -> Bool? {
+        let originalCGColor = cgColor
+        let RGBCGColor = originalCGColor.converted(
+            to: CGColorSpaceCreateDeviceRGB(),
+            intent: .defaultIntent,
+            options: nil
+        )
+        guard let components = RGBCGColor?.components else { return nil }
+        guard components.count >= 3 else { return nil }
 
-        
+        let brightness =
+            Float((components[0] * 299) + (components[1] * 587) + (components[2] * 114))
+        return brightness > threshold
     }
 }

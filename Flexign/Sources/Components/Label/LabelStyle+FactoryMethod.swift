@@ -6,7 +6,7 @@
 //
 
 public extension LabelStyle {
-    static func withFont(_ font: UIFont, _ color: UIColor = .system(.label)) -> LabelStyle {
+    static func styleWith(font: UIFont, color: UIColor = .system(.label)) -> LabelStyle {
         return LabelStyle(textColor: color, font: font)
     }
 }

@@ -6,11 +6,11 @@
 //
 
 public extension UILabel {
-    func apply(style: LabelStyle?) {
-        apply(style: style?.viewStyle)
-        textAlignment = style?.textAlignment ?? .left
-        textColor = style?.textColor ?? .system(.label)
-        font = style?.font ?? UIFont.default.paragraph
-        numberOfLines = style?.numberOfLines ?? 0
+    func apply(style: LabelStyle) {
+        apply(style: style.viewStyle)
+        textAlignment = style.textAlignment
+        textColor = style.textColor
+        font = style.font
+        numberOfLines = style.numberOfLines
     }
 }

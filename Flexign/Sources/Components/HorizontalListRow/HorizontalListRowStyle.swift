@@ -9,20 +9,18 @@ public struct HorizontalListRowStyle {
     // MARK: Lifecycle
 
     public init(
-        viewStyle: ViewStyle? = nil,
-        separatorStyle: SeparatorStyle? = nil,
-        itemsSpacing: CGFloat? = nil,
-        horizontalPadding: CGFloat? = nil,
-        verticalPadding: CGFloat? = nil,
-        separatorVisible: Bool? = nil,
-        leadingSeparatorPosition: SeparatorPosition? = nil,
-        trailingSeparatorPosition: SeparatorPosition? = nil
+        viewStyle: ViewStyle = .default,
+        separatorStyle: SeparatorStyle = SeparatorStyle(),
+        itemsSpacing: CGFloat = Padding.p4,
+        padding: UIEdgeInsets = .zero,
+        separatorVisible: Bool = false,
+        leadingSeparatorPosition: SeparatorPosition = .content(.leading),
+        trailingSeparatorPosition: SeparatorPosition = .extra(.trailing)
     ) {
         self.viewStyle = viewStyle
         self.separatorStyle = separatorStyle
         self.itemsSpacing = itemsSpacing
-        self.horizontalPadding = horizontalPadding
-        self.verticalPadding = verticalPadding
+        self.padding = padding
         self.separatorVisible = separatorVisible
         self.leadingSeparatorPosition = leadingSeparatorPosition
         self.trailingSeparatorPosition = trailingSeparatorPosition
@@ -44,13 +42,11 @@ public struct HorizontalListRowStyle {
         }
     }
 
-    public let viewStyle: ViewStyle?
-    public let separatorStyle: SeparatorStyle?
-
-    public let itemsSpacing: CGFloat?
-    public let horizontalPadding: CGFloat?
-    public let verticalPadding: CGFloat?
-    public let separatorVisible: Bool?
-    public let leadingSeparatorPosition: SeparatorPosition?
-    public let trailingSeparatorPosition: SeparatorPosition?
+    public let viewStyle: ViewStyle
+    public let separatorStyle: SeparatorStyle
+    public let itemsSpacing: CGFloat
+    public let padding: UIEdgeInsets
+    public let separatorVisible: Bool
+    public let leadingSeparatorPosition: SeparatorPosition
+    public let trailingSeparatorPosition: SeparatorPosition
 }

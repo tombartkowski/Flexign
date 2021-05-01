@@ -7,10 +7,10 @@
 
 public struct VerticalLabelsContentStyle {
     public init(
-        viewStyle: ViewStyle? = nil,
-        topLabelStyle: LabelStyle? = nil,
-        bottomLabelStyle: LabelStyle? = nil,
-        spacing: CGFloat? = nil
+        viewStyle: ViewStyle = .default,
+        topLabelStyle: LabelStyle = .styleWith(font: .headline),
+        bottomLabelStyle: LabelStyle = .styleWith(font: .subheadline),
+        spacing: CGFloat = Padding.p1
     ) {
         self.viewStyle = viewStyle
         self.topLabelStyle = topLabelStyle
@@ -20,9 +20,8 @@ public struct VerticalLabelsContentStyle {
 
     // MARK = Public
 
-    public let viewStyle: ViewStyle?
-
-    public let topLabelStyle: LabelStyle?
-    public let bottomLabelStyle: LabelStyle?
-    public let spacing: CGFloat?
+    public let viewStyle: ViewStyle
+    public let topLabelStyle: LabelStyle
+    public let bottomLabelStyle: LabelStyle
+    public let spacing: CGFloat
 }

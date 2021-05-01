@@ -27,8 +27,10 @@ extension UIView {
             }
         case .squircle:
             applySquircle(for: bounds)
-        default:
-            break
+        case .none:
+            if layer.cornerRadius != 0 {
+                layer.cornerRadius = 0
+            }
         }
     }
 }

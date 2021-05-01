@@ -12,7 +12,7 @@ open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIV
         media: Media? = nil,
         content: Content? = nil,
         extra: Extra? = nil,
-        style: HorizontalListRowStyle? = nil
+        style: HorizontalListRowStyle = HorizontalListRowStyle.Default.basic
     ) {
         self.style = style
         super.init(frame: .zero)
@@ -32,102 +32,49 @@ open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIV
 
     // MARK: Open
 
-    open var style: HorizontalListRowStyle?
-
+    open var style: HorizontalListRowStyle
     open var media: Media?
     open var content: Content?
     open var extra: Extra?
-
     open var separator = Separator()
 
     open func layoutView() {
         translatesAutoresizingMaskIntoConstraints = false
+        
         addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.topAnchor.constraint(
-            equalTo: topAnchor,
-            constant: style?.verticalPadding ?? Padding.p3
-        ).isActive = true
-        bottomAnchor.constraint(
-            equalTo: stackView.bottomAnchor,
-            constant: style?.verticalPadding ?? Padding.p3
-        ).isActive = true
-        stackView.leadingAnchor.constraint(
-            equalTo: leadingAnchor,
-            constant: style?.horizontalPadding ?? 0
-        ).isActive = true
-        trailingAnchor.constraint(
-            equalTo: stackView.trailingAnchor,
-            constant: style?.horizontalPadding ?? 0
-        ).isActive = true
+        stackView.topAnchor
+            .constraint(equalTo: topAnchor, constant: style.padding.top).isActive = true
+        stackView.leadingAnchor
+            .constraint(equalTo: leadingAnchor, constant: style.padding.left).isActive = true
+        bottomAnchor.constraint(equalTo: stackView.bottomAnchor, constant: style.padding.bottom)
+            .isActive = true
+        trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: style.padding.right)
+            .isActive = true
 
-        if let media = media {
-            stackView.addArrangedSubview(media)
-        }
-        if let content = content {
-            stackView.addArrangedSubview(content)
-        }
-        if let extra = extra {
-            stackView.addArrangedSubview(extra)
-        }
+        if let media = media { stackView.addArrangedSubview(media) }
+        if let content = content { stackView.addArrangedSubview(content) }
+        if let extra = extra { stackView.addArrangedSubview(extra) }
 
         addSubview(separator)
+        separator.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
 
-    open func apply(style: HorizontalListRowStyle?) {
-        apply(style: style?.viewStyle)
-        separator.apply(style: style?.separatorStyle)
+    open func apply(style: HorizontalListRowStyle) {
+        apply(style: style.viewStyle)
+        separator.apply(style: style.separatorStyle)
+        stackView.spacing = style.itemsSpacing
 
-        stackView.spacing = style?.itemsSpacing ?? Padding.p6
-        var leadingAnchor: NSLayoutXAxisAnchor?
-        switch style?.leadingSeparatorPosition {
-        case .container(.leading):
-            leadingAnchor = self.leadingAnchor
-        case .container(.trailing):
-            leadingAnchor = self.trailingAnchor
-        case .media(.leading):
-            leadingAnchor = media?.leadingAnchor
-        case .media(.trailing):
-            leadingAnchor = media?.trailingAnchor
-        case .content(.leading):
-            leadingAnchor = content?.leadingAnchor
-        case .content(.trailing):
-            leadingAnchor = content?.trailingAnchor
-        case .extra(.leading):
-            leadingAnchor = extra?.leadingAnchor
-        case .extra(.trailing):
-            leadingAnchor = extra?.trailingAnchor
-        default:
-            break
-        }
+        let leadingAnchor = anchorFor(style.leadingSeparatorPosition) ?? self.leadingAnchor
+        let trailingAnchor = anchorFor(style.trailingSeparatorPosition) ?? self.trailingAnchor
 
-        var trailingAnchor: NSLayoutXAxisAnchor?
-        switch style?.trailingSeparatorPosition {
-        case .container(.leading):
-            trailingAnchor = self.leadingAnchor
-        case .container(.trailing):
-            trailingAnchor = self.trailingAnchor
-        case .media(.leading):
-            trailingAnchor = media?.leadingAnchor
-        case .media(.trailing):
-            trailingAnchor = media?.trailingAnchor
-        case .content(.leading):
-            trailingAnchor = content?.leadingAnchor
-        case .content(.trailing):
-            trailingAnchor = content?.trailingAnchor
-        case .extra(.leading):
-            trailingAnchor = extra?.leadingAnchor
-        case .extra(.trailing):
-            trailingAnchor = extra?.trailingAnchor
-        default:
-            break
-        }
-        
-        separator.isHidden = !(style?.separatorVisible ?? true)
-        separator.removeConstraints(separator.constraints.filter { $0.firstAttribute != .height })
-        separator.leadingAnchor.constraint(equalTo: leadingAnchor ?? self.leadingAnchor).isActive = true
-        (trailingAnchor ?? self.trailingAnchor).constraint(equalTo: separator.trailingAnchor).isActive = true
-        separator.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        separator.isHidden = style.separatorVisible
+        separator.removeConstraints(
+            separator.constraints
+                .filter { $0.firstAttribute != .height || $0.firstAttribute != .bottom }
+        )
+        separator.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        trailingAnchor.constraint(equalTo: separator.trailingAnchor).isActive = true
     }
 
     // MARK: Internal
@@ -139,4 +86,32 @@ open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIV
         stackView.distribution = .fill
         return stackView
     }()
+
+    // MARK: Private
+
+    private func anchorFor(
+        _ separatorPosition: HorizontalListRowStyle
+            .SeparatorPosition
+    ) -> NSLayoutXAxisAnchor? {
+        var anchor: NSLayoutXAxisAnchor?
+        switch separatorPosition {
+        case .container(.leading):
+            anchor = leadingAnchor
+        case .container(.trailing):
+            anchor = trailingAnchor
+        case .media(.leading):
+            anchor = media?.leadingAnchor
+        case .media(.trailing):
+            anchor = media?.trailingAnchor
+        case .content(.leading):
+            anchor = content?.leadingAnchor
+        case .content(.trailing):
+            anchor = content?.trailingAnchor
+        case .extra(.leading):
+            anchor = extra?.leadingAnchor
+        case .extra(.trailing):
+            anchor = extra?.trailingAnchor
+        }
+        return anchor
+    }
 }

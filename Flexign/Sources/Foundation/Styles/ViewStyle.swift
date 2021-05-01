@@ -11,10 +11,10 @@ public struct ViewStyle {
     // MARK: Lifecycle
 
     public init(
-        backgroundColor: UIColor? = nil,
+        backgroundColor: UIColor = UIColor.clear,
         borderColor: UIColor? = nil,
         borderWidth: CGFloat? = nil,
-        cornerRadius: CornerRadius? = nil,
+        cornerRadius: CornerRadius = .none,
         elevation: Elevatable? = nil
     ) {
         self.backgroundColor = backgroundColor
@@ -26,10 +26,10 @@ public struct ViewStyle {
 
     // MARK: Public
 
-    public let backgroundColor: UIColor?
+    public let backgroundColor: UIColor
     public let borderColor: UIColor?
     public let borderWidth: CGFloat?
-    public let cornerRadius: CornerRadius?
+    public let cornerRadius: CornerRadius
     public let elevation: Elevatable?
 }
 

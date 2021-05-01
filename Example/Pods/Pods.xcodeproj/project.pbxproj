@@ -30,6 +30,9 @@
 		39D1F1E166E6202EB1CF8E734AA46662 /* UIImage+ButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C072B93114A19B6B9CB21C38EFBD06E2 /* UIImage+ButtonImage.swift */; };
 		3CADFDD6B613435298788152C5472E4D /* UIView+Squircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD308BA6024829E4E0166F2580971A /* UIView+Squircle.swift */; };
 		40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		408DEEBA263D3191007228F2 /* IconSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408DEEB9263D3191007228F2 /* IconSize.swift */; };
+		408DEEC4263D4CE2007228F2 /* ButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408DEEC3263D4CE2007228F2 /* ButtonSize.swift */; };
+		408DEECA263D53C0007228F2 /* ButtonStyle+FactoryMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408DEEC9263D53C0007228F2 /* ButtonStyle+FactoryMethod.swift */; };
 		409EDC28263C50F400890B6A /* UIView+Common+LayoutSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EDC1E263C50E500890B6A /* UIView+Common+LayoutSubviews.swift */; };
 		409EDC3B263C520300890B6A /* Colorable+Tints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EDC2D263C51FE00890B6A /* Colorable+Tints.swift */; };
 		409EDC5D263C58EF00890B6A /* ViewStyle+FactoryMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EDC53263C58DF00890B6A /* ViewStyle+FactoryMethod.swift */; };
@@ -45,7 +48,6 @@
 		71C026C1B35C3920B6594C6D0104D742 /* AnimationDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B25BA316275728E5AB00A2BF19F34B /* AnimationDuration.swift */; };
 		7348A313D7FBCC93A8C4D3049F9AF422 /* SeparatorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A917AED9212222F8BC49720F0B138C /* SeparatorStyle.swift */; };
 		79A95678D24242AA56F2F96723F341E2 /* Pods-Flexign_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B551A613F1DF9681370DDFFE971C77D7 /* Pods-Flexign_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7AE9900B0143E828052785C7DBCD2A46 /* IconSizeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B88D3B3B0FD2788392C32A61AE0A98 /* IconSizeable.swift */; };
 		7F88B6AF21E65087E3EAC6CB81CDDBAA /* CornerRadiusSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E58B0FF90947BA76D265D99D2C02CB /* CornerRadiusSize.swift */; };
 		803EB1DF7E44890F2C94D50A7210D0A8 /* VerticalLabelsContentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AF3B60E6795D1672EDAD2C77F7B8EB /* VerticalLabelsContentStyle.swift */; };
 		80EC8CA193BA73BA82F44480E527FCE3 /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D321E4AD9C4601FB8E2F60ECAB3F691 /* LabelStyle.swift */; };
@@ -148,6 +150,9 @@
 		39167224DDDCA16FC809E84C9B933CCC /* VerticalLabelsContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerticalLabelsContent.swift; sourceTree = "<group>"; };
 		3B0A6037A99C36E0BFA339E066AC747A /* CGSize+Insets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CGSize+Insets.swift"; sourceTree = "<group>"; };
 		3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
+		408DEEB9263D3191007228F2 /* IconSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSize.swift; sourceTree = "<group>"; };
+		408DEEC3263D4CE2007228F2 /* ButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSize.swift; sourceTree = "<group>"; };
+		408DEEC9263D53C0007228F2 /* ButtonStyle+FactoryMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+FactoryMethod.swift"; sourceTree = "<group>"; };
 		409EDC1E263C50E500890B6A /* UIView+Common+LayoutSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Common+LayoutSubviews.swift"; sourceTree = "<group>"; };
 		409EDC2D263C51FE00890B6A /* Colorable+Tints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colorable+Tints.swift"; sourceTree = "<group>"; };
 		409EDC53263C58DF00890B6A /* ViewStyle+FactoryMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewStyle+FactoryMethod.swift"; sourceTree = "<group>"; };
@@ -175,7 +180,6 @@
 		7288965BA0B58A4FB0692BFDCD1A72DA /* UIColor+System+GroupedBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+System+GroupedBackground.swift"; sourceTree = "<group>"; };
 		771097C727F69BECC0E8375C65F9BFED /* UIColor+Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		781DACED7F376105CA26C97906327954 /* Pods-Flexign_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Flexign_Tests-umbrella.h"; sourceTree = "<group>"; };
-		78B88D3B3B0FD2788392C32A61AE0A98 /* IconSizeable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IconSizeable.swift; sourceTree = "<group>"; };
 		7A3FBA0AF9C8DEFF15B1805CBE018D2F /* Flexign.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Flexign.modulemap; sourceTree = "<group>"; };
 		7B46FE7A23F0B360765A7A15AF16145B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
@@ -290,9 +294,9 @@
 			isa = PBXGroup;
 			children = (
 				A54111CBF914E1A0199280D442EA726A /* Icon.swift */,
-				78B88D3B3B0FD2788392C32A61AE0A98 /* IconSizeable.swift */,
 				2AD672208D5C582D0D70612C8CAD863E /* IconStyle.swift */,
 				8EEA85655375B3641AEF9D5412FFF401 /* IconStyle+Default.swift */,
+				408DEEB9263D3191007228F2 /* IconSize.swift */,
 			);
 			path = Icon;
 			sourceTree = "<group>";
@@ -661,6 +665,8 @@
 				64AE58BB310AB172CB5BE63963DD6395 /* ButtonStyle+Default.swift */,
 				501675424772EE2C282BABF7D2EA2BC0 /* UIButton+Style.swift */,
 				C072B93114A19B6B9CB21C38EFBD06E2 /* UIImage+ButtonImage.swift */,
+				408DEEC3263D4CE2007228F2 /* ButtonSize.swift */,
+				408DEEC9263D53C0007228F2 /* ButtonStyle+FactoryMethod.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -918,7 +924,6 @@
 				FE87555E4AF7D1AB24E8D5CF80AEEF5C /* HorizontalListRow.swift in Sources */,
 				8131B890A9CA49B1C3AB0D531348C0E8 /* HorizontalListRowStyle+Default.swift in Sources */,
 				39869A30BB5225BF88868791774FEB59 /* Icon.swift in Sources */,
-				7AE9900B0143E828052785C7DBCD2A46 /* IconSizeable.swift in Sources */,
 				4904478B14E8466626BD63842FA2F80B /* IconStyle+Default.swift in Sources */,
 				17B19F541C31C5DAE2CDC5CD019DB15E /* IconStyle.swift in Sources */,
 				ED9E330397F49821A25A989591CAC8E2 /* Label.swift in Sources */,
@@ -941,6 +946,7 @@
 				E40D191C5E18B2A299761B1723BE29FF /* UIColor+System+Label.swift in Sources */,
 				0CB528D878F23BE7ED34D5E6E7ED1206 /* UIColor+System+Separator.swift in Sources */,
 				2D5DB57107A5A6B9C9FA4473B8726C4F /* UIColor+System.swift in Sources */,
+				408DEECA263D53C0007228F2 /* ButtonStyle+FactoryMethod.swift in Sources */,
 				8F81BADF71AE0A90062661AACC693B96 /* UIFont+TextStyleWeight.swift in Sources */,
 				39D1F1E166E6202EB1CF8E734AA46662 /* UIImage+ButtonImage.swift in Sources */,
 				65165DF2F88821FD45B76370956FD457 /* UIImage+Resize.swift in Sources */,
@@ -950,7 +956,9 @@
 				97EF1E4CE3FDD2F13879DADC52711FB8 /* UIView+Style.swift in Sources */,
 				A3DE89CCB18929A9D1E9B6FDFCBDC070 /* VerticalLabelsContent.swift in Sources */,
 				20B1E5F66F09F5D0F7032C2A083EBA77 /* VerticalLabelsContentStyle+Default.swift in Sources */,
+				408DEEBA263D3191007228F2 /* IconSize.swift in Sources */,
 				803EB1DF7E44890F2C94D50A7210D0A8 /* VerticalLabelsContentStyle.swift in Sources */,
+				408DEEC4263D4CE2007228F2 /* ButtonSize.swift in Sources */,
 				BCB72338072031ABD63FDE98A1252DF8 /* ViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

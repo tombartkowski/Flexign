@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIFont {
+public extension UIFont {
     static func preferredFont(for style: TextStyle, weight: Weight) -> UIFont {
         if #available(iOS 11.0, *) {
             let traits = UITraitCollection(preferredContentSizeCategory: .large)

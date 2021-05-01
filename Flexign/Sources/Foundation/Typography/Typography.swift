@@ -5,14 +5,12 @@
 //
 
 public extension UIFont {
-    enum `default` {
-        static let header1 = UIFont.preferredFont(for: .title1, weight: .bold)
-        static let header2 = UIFont.preferredFont(for: .title2, weight: .bold)
-        static let header3 = UIFont.preferredFont(for: .title3, weight: .semibold)
-        static let headline = UIFont.preferredFont(for: .headline, weight: .medium)
-        static let subheadline = UIFont.preferredFont(for: .subheadline, weight: .regular)
-        static let paragraph = UIFont.preferredFont(for: .body, weight: .regular)
-        static let callout = UIFont.preferredFont(for: .callout, weight: .regular)
-        static let footnote = UIFont.preferredFont(for: .footnote, weight: .regular)
-    }
+    class var header1: UIFont { UIFont.preferredFont(for: .title1, weight: .bold) }
+    class var header2: UIFont { UIFont.preferredFont(for: .title2, weight: .bold) }
+    class var header3: UIFont { UIFont.preferredFont(for: .title3, weight: .semibold) }
+    class var headline: UIFont { UIFont.preferredFont(for: .headline, weight: .medium) }
+    class var subheadline: UIFont { UIFont.preferredFont(for: .subheadline, weight: .regular) }
+    class var paragraph: UIFont { UIFont.preferredFont(for: .body, weight: .regular) }
+    class var callout: UIFont { UIFont.preferredFont(for: .callout, weight: .regular) }
+    class var footnote: UIFont { UIFont.preferredFont(for: .footnote, weight: .regular) }
 }

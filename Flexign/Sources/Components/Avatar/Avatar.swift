@@ -5,24 +5,29 @@
 //
 
 open class Avatar: UIImageView {
-    
-    open var style: ViewStyle?
-    
-    public init(style: ViewStyle? = nil) {
-        super.init(frame: .zero)
+    // MARK: Lifecycle
+
+    public init(style: ViewStyle = ViewStyle.colored(.system(.grey6), cornerRadius: .full)) {
         self.style = style
-        apply(style: style)
+        super.init(frame: .zero)
+
         contentMode = .scaleAspectFill
         layer.masksToBounds = true
+
+        apply(style: style)
     }
-    
-    override open func layoutSubviews() {
-        super.layoutSubviews()
-        updateWithStyle(style: style)
-    }
-    
+
     @available(*, unavailable)
     public required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: Open
+
+    open var style: ViewStyle
+
+    override open func layoutSubviews() {
+        super.layoutSubviews()
+        updateWithStyle(style: style)
     }
 }

@@ -17,17 +17,17 @@ open class Button: UIButton {
     ) {
         self.style = style
         super.init(frame: .zero)
-        apply(style: style)
 
         contentVerticalAlignment = .center
         if #available(iOS 11.0, *) {
             adjustsImageSizeForAccessibilityContentSizeCategory = true
         }
         adjustsImageWhenHighlighted = false
-        setImage(image?.buttonImage(for: UIFont.default.button), for: .normal)
-
+        setImage(image?.buttonImage(for: .button), for: .normal)
         titleLabel?.adjustsFontForContentSizeCategory = true
         setTitle(title, for: .normal)
+
+        apply(style: style)
     }
 
     @available(*, unavailable)
@@ -39,11 +39,7 @@ open class Button: UIButton {
 
     open var style: ButtonStyle
 
-    override open var isEnabled: Bool {
-        didSet {
-            self.alpha = isEnabled ? 1 : 0.4
-        }
-    }
+    override open var isEnabled: Bool { didSet { alpha = isEnabled ? 1 : 0.4 } }
 
     override open func layoutSubviews() {
         super.layoutSubviews()
@@ -81,16 +77,15 @@ public extension Button {
 
     private func animate(isHighlighted _: Bool) {
         if isHighlighted {
-            let highlightedColor: UIColor = style.highlightedColor ?? .clear
             animator(
                 lightenBackgroundAnimator,
-                animateTo: highlightedColor,
+                animateTo: style.highlightedColor,
                 withOppositeAnimator: restoreOriginalBackgroundAnimator
             )
         } else {
             animator(
                 restoreOriginalBackgroundAnimator,
-                animateTo: style.viewStyle?.backgroundColor ?? .clear,
+                animateTo: style.viewStyle.backgroundColor,
                 withOppositeAnimator: lightenBackgroundAnimator
             )
         }

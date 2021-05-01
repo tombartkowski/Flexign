@@ -6,12 +6,12 @@
 //
 
 public enum Padding {
-    static let p1: CGFloat = 3
-    static let p2: CGFloat = 5
-    static let p3: CGFloat = 8
-    static let p4: CGFloat = 12
-    static let p5: CGFloat = 16
-    static let p6: CGFloat = 20
-    static let p7: CGFloat = 30
-    static let p8: CGFloat = 42
+    public static let p1: CGFloat = 3
+    public static let p2: CGFloat = 5
+    public static let p3: CGFloat = 8
+    public static let p4: CGFloat = 12
+    public static let p5: CGFloat = 16
+    public static let p6: CGFloat = 20
+    public static let p7: CGFloat = 30
+    public static let p8: CGFloat = 42
 }

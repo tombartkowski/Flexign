@@ -8,9 +8,10 @@
 open class Separator: UIView {
     // MARK: Lifecycle
 
-    public init(style: SeparatorStyle? = nil) {
-        super.init(frame: .zero)
+    public init(style: SeparatorStyle = SeparatorStyle()) {
         self.style = style
+        super.init(frame: .zero)
+
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 0.33).isActive = true
     }
@@ -22,11 +23,12 @@ open class Separator: UIView {
 
     // MARK: Open
 
-    open var style: SeparatorStyle?
+    open var style: SeparatorStyle
 
     // MARK: Public
 
-    public func apply(style: SeparatorStyle?) {
-        backgroundColor = style?.backgroundColor ?? .system(.opaqueSeparator)
+    public func apply(style: SeparatorStyle) {
+        backgroundColor = style.backgroundColor
+        isHidden = style.visible
     }
 }

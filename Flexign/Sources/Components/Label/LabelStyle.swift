@@ -6,28 +6,27 @@
 //
 
 public struct LabelStyle {
-    // MARK = Lifecycle
+    // MARK: Lifecycle
 
     public init(
-        viewStyle: ViewStyle? = nil,
-        textAlignment: NSTextAlignment? = nil,
-        textColor: UIColor? = nil,
-        numberOfLines: Int? = nil,
-        font: UIFont? = nil
+        viewStyle: ViewStyle = .default,
+        textAlignment: NSTextAlignment = .left,
+        textColor: UIColor = .system(.label),
+        numberOfLines: Int = 0,
+        font: UIFont = .paragraph
     ) {
         self.viewStyle = viewStyle
         self.textAlignment = textAlignment
-        self.textColor = .system(.label)
+        self.textColor = textColor
         self.numberOfLines = numberOfLines
         self.font = font
     }
 
-    // MARK = Public
+    // MARK: Public
 
-    public let viewStyle: ViewStyle?
-
-    public let textAlignment: NSTextAlignment?
-    public let textColor: UIColor?
-    public let numberOfLines: Int?
-    public let font: UIFont?
+    public let viewStyle: ViewStyle
+    public let textAlignment: NSTextAlignment
+    public let textColor: UIColor
+    public let numberOfLines: Int
+    public let font: UIFont
 }

@@ -7,38 +7,10 @@
 
 public extension IconStyle {
     enum Default {
-        public enum Size: IconSizeable {
-            case xs
-            case sm
-            case md
-            case lg
-            case xl
-
-            // MARK: Public
-
-            public var value: CGFloat {
-                switch self {
-                case .xs:
-                    return 16
-                case .sm:
-                    return 20
-                case .md:
-                    return 24
-                case .lg:
-                    return 30
-                case .xl:
-                    return 38
-                }
-            }
-        }
-
-        public static let secondarySquircleLg = IconStyle(
-            viewStyle: ViewStyle(
-                backgroundColor: .system(.blue),
-                cornerRadius: CornerRadius.squircle
-            ),
-            size: Size.lg,
-            variant: .tinted(UIColor.white),
+        public static let greySquircleMd = IconStyle(
+            viewStyle: ViewStyle.colored(.system(.grey5), cornerRadius: .squircle),
+            size: IconSize.Default.lg,
+            color: .tinted(.system(.label)),
             padding: Padding.p2
         )
     }

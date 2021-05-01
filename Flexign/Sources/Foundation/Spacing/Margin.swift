@@ -6,6 +6,7 @@
 //
 
 public enum Margin {
-    static let small: CGFloat = 16
-    static let base: CGFloat = 20
+    public static let sm: CGFloat = 12
+    public static let md: CGFloat = 16
+    public static let lg: CGFloat = 20
 }

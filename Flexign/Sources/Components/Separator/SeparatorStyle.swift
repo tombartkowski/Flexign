@@ -9,8 +9,8 @@ public struct SeparatorStyle {
     // MARK: Lifecycle
 
     public init(
-        backgroundColor: UIColor? = nil,
-        visible: Bool? = nil
+        backgroundColor: UIColor = .system(.opaqueSeparator),
+        visible: Bool = true
     ) {
         self.backgroundColor = backgroundColor
         self.visible = visible
@@ -18,6 +18,6 @@ public struct SeparatorStyle {
 
     // MARK: Public
 
-    public let visible: Bool?
-    public let backgroundColor: UIColor?
+    public let visible: Bool
+    public let backgroundColor: UIColor
 }

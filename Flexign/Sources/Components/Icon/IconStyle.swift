@@ -9,27 +9,26 @@ public struct IconStyle {
     // MARK: Lifecycle
 
     public init(
-        viewStyle: ViewStyle? = nil,
-        size: IconSizeable? = nil,
-        variant: Variant? = nil,
-        padding: CGFloat? = nil
+        viewStyle: ViewStyle = .default,
+        size: CGFloat = IconSize.Default.sm,
+        color: Color = .tinted(.system(.label)),
+        padding: CGFloat = 0
     ) {
         self.viewStyle = viewStyle
         self.size = size
-        self.variant = variant
+        self.color = color
         self.padding = padding
     }
 
     // MARK: Public
 
-    public enum Variant {
-        case plain
+    public enum Color {
+        case original
         case tinted(UIColor)
     }
 
-    public let viewStyle: ViewStyle?
-
-    public let size: IconSizeable?
-    public let variant: Variant?
-    public let padding: CGFloat?
+    public let viewStyle: ViewStyle
+    public let size: CGFloat
+    public let color: Color
+    public let padding: CGFloat
 }

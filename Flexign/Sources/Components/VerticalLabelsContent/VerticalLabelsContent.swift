@@ -8,7 +8,9 @@
 public class VerticalLabelsContent: UIView {
     // MARK: Lifecycle
 
-    public init(style: VerticalLabelsContentStyle? = nil) {
+    public init(
+        style: VerticalLabelsContentStyle = VerticalLabelsContentStyle.Default.headlineSubheadline
+    ) {
         self.style = style
         super.init(frame: .zero)
 
@@ -16,13 +18,14 @@ public class VerticalLabelsContent: UIView {
         apply(style: style)
     }
 
-    public required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    @available(*, unavailable)
+    public required init?(coder _: NSCoder) {
+        fatalError()
     }
 
     // MARK: Open
 
-    open var style: VerticalLabelsContentStyle?
+    open var style: VerticalLabelsContentStyle
 
     open var topLabel = Label()
     open var bottomLabel = Label()
@@ -56,11 +59,11 @@ public class VerticalLabelsContent: UIView {
         trailingAnchor.constraint(equalTo: bottomLabel.trailingAnchor).isActive = true
     }
 
-    open func apply(style: VerticalLabelsContentStyle?) {
-        apply(style: style?.viewStyle)
-        topLabel.apply(style: style?.topLabelStyle)
-        bottomLabel.apply(style: style?.bottomLabelStyle)
-        spacing?.constant = (style?.spacing ?? Padding.p1)
+    open func apply(style: VerticalLabelsContentStyle) {
+        apply(style: style.viewStyle)
+        topLabel.apply(style: style.topLabelStyle)
+        bottomLabel.apply(style: style.bottomLabelStyle)
+        spacing?.constant = style.spacing
         layoutIfNeeded()
     }
 

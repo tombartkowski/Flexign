@@ -8,26 +8,27 @@
 open class Label: UILabel {
     // MARK: Lifecycle
 
-    public init(text: String? = nil, style: LabelStyle? = nil) {
+    public init(text: String? = nil, style: LabelStyle = LabelStyle.Default.paragraph) {
         self.style = style
         super.init(frame: .zero)
-        apply(style: style)
 
         adjustsFontForContentSizeCategory = true
         self.text = text
+        
+        apply(style: style)
     }
 
     @available(*, unavailable)
     public required init?(coder _: NSCoder) {
         fatalError()
     }
-    
-    override open func layoutSubviews() {
-        super.layoutSubviews()
-        updateWithStyle(style: style?.viewStyle)
-    }
 
     // MARK: Open
 
-    open var style: LabelStyle?
+    open var style: LabelStyle
+
+    override open func layoutSubviews() {
+        super.layoutSubviews()
+        updateWithStyle(style: style.viewStyle)
+    }
 }
