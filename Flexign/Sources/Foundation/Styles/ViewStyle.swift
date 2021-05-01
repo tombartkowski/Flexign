@@ -14,14 +14,12 @@ public struct ViewStyle {
         backgroundColor: UIColor = UIColor.clear,
         borderColor: UIColor? = nil,
         borderWidth: CGFloat? = nil,
-        cornerRadius: CornerRadius = .none,
-        elevation: Elevatable? = nil
+        cornerRadius: CornerRadius = .none
     ) {
         self.backgroundColor = backgroundColor
         self.borderColor = borderColor
         self.borderWidth = borderWidth
         self.cornerRadius = cornerRadius
-        self.elevation = elevation
     }
 
     // MARK: Public
@@ -30,6 +28,5 @@ public struct ViewStyle {
     public let borderColor: UIColor?
     public let borderWidth: CGFloat?
     public let cornerRadius: CornerRadius
-    public let elevation: Elevatable?
 }
 

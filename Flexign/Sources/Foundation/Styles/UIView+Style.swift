@@ -9,7 +9,6 @@ public extension UIView {
         backgroundColor = style.backgroundColor
         layer.borderColor = style.borderColor?.cgColor
         layer.borderWidth = style.borderWidth ?? .zero
-        style.elevation?.shadow?.apply(to: layer)
         applyCornerRadius(style.cornerRadius)
     }
 }

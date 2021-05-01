@@ -11,7 +11,7 @@ public extension HorizontalListRowStyle {
             itemsSpacing: Padding.p3,
             padding: UIEdgeInsets(
                 top: Padding.p4,
-                left: Margin.base,
+                left: Margin.lg,
                 bottom: Padding.p4,
                 right: Padding.p4
             )
