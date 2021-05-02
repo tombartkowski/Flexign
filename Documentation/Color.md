@@ -7,7 +7,7 @@ However, by default system colors are available only for iOS 13.0+ (with few exc
 #### Usage
 
 ```swift
-let color = UIColor.system(Color.label)
+let color = UIColor.system(SystemColor.label)
 
 // Shorter version
 let color: UIColor = .system(.label)
@@ -19,7 +19,7 @@ This will return a system `UIColor` that will automatically adapt to dark mode o
 
 Below is a list of colors that you can use with the `func system(_ color: Color) -> UIColor`.
 
-- **Name** is the `Color` case name,
+- **Name** is the `SystemColor` case name,
 - **Color** is the preview image that include the alpha channel,
 - **Hex String** is the 8 characters-long hex for this color. The last two characters specify the alpha channel,
 - **RGBA** is the ARGB value for this color.
