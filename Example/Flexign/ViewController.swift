@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         mainStackView.addArrangedSubview(headerLabel)
         mainStackView.addArrangedSubview(row)
         mainStackView.addArrangedSubview(verticalStackView)
-
+        
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
         mainStackView.topAnchor.constraint(
             equalTo: view.safeAreaLayoutGuide.topAnchor,
@@ -96,3 +96,4 @@ class ViewController: UIViewController {
         avatar.widthAnchor.constraint(equalToConstant: 55).isActive = true
     }
 }
+
