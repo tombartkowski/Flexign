@@ -1,5 +1,3 @@
-# Flexign
-
 <p align="center">
   <a href="https://raw.githubusercontent.com/tombartkowski/Flexign">
     <img src="https://raw.githubusercontent.com/tombartkowski/Flexign/master/logo.svg" alt="Logo" width="220" height="150">
@@ -12,11 +10,8 @@
     <br />
     <br />
     <a href="#features">Features</a>
-    ·
     <a href="#quick-example">Example</a>
-    ·
     <a href="#usage">Usage</a>
-    ·
     <a href="#installation">Installation</a>
   </p>
 </p>
@@ -50,18 +45,18 @@
 
 ## Features
 
-- ✅ Complete typography set,
-- ✅ Full support for the font size accessibility,
-- ✅ System Colors with < iOS 13.0 support,
-- ✅ Dark mode,
-- ✅ Spacings & paddings,
-- ✅ Animation,
-- ✅ Corner radii with popular in the Apple ecosystem [Squircle](https://en.wikipedia.org/wiki/Squircle) support,
-- ✅ Components configured using declarative `ViewStyle`'s ,
-- ✅ Button with many color variations, a highlight animation and left / right icons,
-- ✅ Label with beautiful presets and full accessibility support,
-- ✅ Icons with many sizes, shapes and forms,
-- ✅ Robust and extensible layouts for rapid development.
+- :white_check_mark: Complete typography set,
+- :white_check_mark: Full support for the font size accessibility,
+- :white_check_mark: System Colors with < iOS 13.0 support,
+- :white_check_mark: Dark mode,
+- :white_check_mark: Spacings & paddings,
+- :white_check_mark: Animation,
+- :white_check_mark: Corner radii with popular in the Apple ecosystem [Squircle](https://en.wikipedia.org/wiki/Squircle) support,
+- :white_check_mark: Components configured using declarative `ViewStyle`'s ,
+- :white_check_mark: Button with many color variations, a highlight animation and left / right icons,
+- :white_check_mark: Label with beautiful presets and full accessibility support,
+- :white_check_mark: Icons with many sizes, shapes and forms,
+- :white_check_mark: Robust and extensible layouts for rapid development.
 
 ## Quick Example
 
