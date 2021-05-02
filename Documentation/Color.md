@@ -1,4 +1,4 @@
-## Color
+# Color
 
 Flexign comes with a beautfiul color pallette that automatically adapts to the dark mode thanks to usage of system colors.
 
