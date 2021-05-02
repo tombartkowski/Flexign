@@ -5,16 +5,16 @@
 //  Created by Tomasz Bartkowski on 29/04/2021.
 //
 
-open class Icon: UIImageView {
+open class Icon: UIView {
     // MARK: Lifecycle
 
     public init(image: UIImage?, style: IconStyle = IconStyle()) {
         self.style = style
         super.init(frame: .zero)
 
-        self.image = image
+        imageView.image = image
         originalImage = image
-        contentMode = .center
+        imageView.contentMode = .scaleAspectFit
 
         layoutView()
         apply(style: style)
@@ -30,11 +30,19 @@ open class Icon: UIImageView {
     open var style: IconStyle
 
     open func layoutView() {
+        addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+
+        imageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        widthAnchor.constraint(equalToConstant: style.size).isActive = true
+        heightAnchor.constraint(equalToConstant: style.size).isActive = true
+
         translatesAutoresizingMaskIntoConstraints = false
-        widthConstraint = widthAnchor.constraint(equalToConstant: style.size)
+        widthConstraint = imageView.widthAnchor.constraint(equalToConstant: style.size)
         widthConstraint?.isActive = true
 
-        heightConstraint = heightAnchor.constraint(equalToConstant: style.size)
+        heightConstraint = imageView.heightAnchor.constraint(equalToConstant: style.size)
         heightConstraint?.isActive = true
     }
 
@@ -48,14 +56,20 @@ open class Icon: UIImageView {
                 dy: style.padding
             ))
 
-        if let originalImage = self.originalImage, style.viewStyle.cornerRadius == CornerRadius.none {
+        if let originalImage = self.originalImage {
+            
+            let size = CGSize(width: style.size, height: style.size).insetBy(
+                dx: style.padding,
+                dy: style.padding
+            )
             let aspectRatio = originalImage.size.width / originalImage.size.height
             var newSize: CGSize
             if originalImage.size.width >= originalImage.size.height {
-                newSize = CGSize(width: style.size, height: style.size / aspectRatio)
+                newSize = CGSize(width: size.width, height: size.width / aspectRatio)
             } else {
-                newSize = CGSize(width: style.size * aspectRatio, height: style.size)
+                newSize = CGSize(width: size.width * aspectRatio, height: size.width)
             }
+
             if newSize.width != widthConstraint?.constant {
                 widthConstraint?.constant = newSize.width
                 setNeedsLayout()
@@ -68,10 +82,10 @@ open class Icon: UIImageView {
 
         switch style.color {
         case .original:
-            image = resizedImage?.withRenderingMode(.alwaysOriginal)
-        case let .tinted(UIColor):
-            image = resizedImage?.withRenderingMode(.alwaysTemplate)
-            tintColor = UIColor
+            imageView.image = resizedImage?.withRenderingMode(.alwaysOriginal)
+        case let .tinted(color):
+            imageView.image = resizedImage?.withRenderingMode(.alwaysTemplate)
+            tintColor = color
         }
     }
 
@@ -83,6 +97,7 @@ open class Icon: UIImageView {
 
     // MARK: Private
 
+    private let imageView = UIImageView()
     private var originalImage: UIImage?
     private var widthConstraint: NSLayoutConstraint?
     private var heightConstraint: NSLayoutConstraint?

@@ -14,7 +14,7 @@ public extension ButtonStyle {
     }
 
     static func with(
-        size: UIEdgeInsets = ButtonSize.Default.lg,
+        size: UIEdgeInsets = ButtonSize.Default.md,
         colorStyle: ColorStyle,
         cornerRadius: CornerRadius = .squircle
     ) -> ButtonStyle {
