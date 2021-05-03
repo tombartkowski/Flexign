@@ -215,8 +215,8 @@ You can jump to the specific topic using the links below.
 
 ### Foundation
 
-1. [Color]()
-2. [Typography]()
+1. [Color](Documentation/Color.md)
+2. [Typography](Documentation/Typography.md)
 3. [Spacing]()
 4. [Typography]()
 5. [Animation]()

@@ -9,7 +9,7 @@ Flexign is a flexible & extendable design system with ready-to-use components fo
 ### Foundation
 
 1. [Color](Color.md)
-2. [Typography]()
+2. [Typography](Typography.md)
 3. [Spacing]()
 4. [Typography]()
 5. [Animation]()
