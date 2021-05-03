@@ -10,7 +10,7 @@ public struct IconStyle {
 
     public init(
         viewStyle: ViewStyle = .default,
-        size: CGFloat = IconSize.Default.sm,
+        size: CGFloat = IconSize.default.sm,
         color: Color = .tinted(.system(.label)),
         padding: CGFloat = 0
     ) {

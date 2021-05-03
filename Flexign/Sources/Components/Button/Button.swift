@@ -13,7 +13,7 @@ open class Button: UIButton {
     public init(
         title: String? = nil,
         image: UIImage? = nil,
-        style: ButtonStyle = ButtonStyle.Default.fillPrimary
+        style: ButtonStyle = ButtonStyle.default.fillPrimary
     ) {
         self.style = style
         super.init(frame: .zero)
@@ -28,6 +28,7 @@ open class Button: UIButton {
         setTitle(title, for: .normal)
 
         apply(style: style)
+        titleLabel?.numberOfLines = 1
     }
 
     @available(*, unavailable)

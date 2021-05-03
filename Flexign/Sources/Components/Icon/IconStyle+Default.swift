@@ -6,10 +6,10 @@
 //
 
 public extension IconStyle {
-    enum Default {
+    enum `default` {
         public static let greySquircleMd = IconStyle(
             viewStyle: ViewStyle.colored(.system(.grey5), cornerRadius: .squircle),
-            size: IconSize.Default.lg,
+            size: IconSize.default.lg,
             color: .tinted(.system(.label)),
             padding: Padding.p2
         )

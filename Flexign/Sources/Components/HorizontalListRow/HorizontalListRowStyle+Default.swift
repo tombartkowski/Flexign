@@ -6,7 +6,7 @@
 //
 
 public extension HorizontalListRowStyle {
-    enum Default {
+    enum `default` {
         public static let basic = HorizontalListRowStyle(
             itemsSpacing: Padding.p3,
             padding: UIEdgeInsets(

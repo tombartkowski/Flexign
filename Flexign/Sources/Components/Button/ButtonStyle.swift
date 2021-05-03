@@ -13,7 +13,7 @@ public struct ButtonStyle {
         titleStyle: LabelStyle = .styleWith(font: .button, color: .system(.label)),
         imageSide: ImageSide = .left,
         highlightedColor: UIColor = UIColor.system(.tertiaryFill).shaded(amount: 0.65),
-        size: UIEdgeInsets = ButtonSize.Default.lg
+        size: UIEdgeInsets = ButtonSize.default.lg
     ) {
         self.viewStyle = viewStyle
         self.titleStyle = titleStyle

@@ -5,10 +5,10 @@
 //
 
 public extension VerticalLabelsContentStyle {
-    enum Default {
+    enum `default` {
         public static let headlineSubheadline = VerticalLabelsContentStyle(
-            topLabelStyle: LabelStyle.Default.headline,
-            bottomLabelStyle: LabelStyle.Default.subheadline,
+            topLabelStyle: LabelStyle.default.headline,
+            bottomLabelStyle: LabelStyle.default.subheadline,
             spacing: Padding.p1
         )
     }

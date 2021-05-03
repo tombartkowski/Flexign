@@ -6,7 +6,7 @@
 //
 
 public extension ButtonStyle {
-    enum Default {
+    enum `default` {
         public static let fillPrimary = ButtonStyle(
             viewStyle: ViewStyle.colored(.system(.blue), cornerRadius: .squircle),
             titleStyle: .styleWith(font: .button, color: .white),

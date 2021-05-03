@@ -80,7 +80,7 @@ let icon = Icon(
   image: UIImage(systemName: "plus.bubble.fill"),
   style: IconStyle(
     viewStyle: .colored(.system(.blue), cornerRadius: .squircle),
-    size: IconSize.Default.lg,
+    size: IconSize.default.lg,
     color: IconStyle.Color.tinted(.white),
     padding: Padding.p2
   )
@@ -190,7 +190,7 @@ enum MyLabelStyle {
 let label = Label(style: .styleWith(font: .callout, color: .red))
 let button = Button(style:
   .with(
-    size: ButtonStyle.Default.md,
+    size: ButtonStyle.default.md,
     colorStyle: .lightFillDarkText(.yellow),
     cornerRadius: .none
   )
@@ -200,7 +200,7 @@ let button = Button(style:
 There are also many hand-crafted presets that you can use out-of-the-box.
 
 ```swift
-let label = Label(style: LabelStyle.Default.subheadline)
+let label = Label(style: LabelStyle.default.subheadline)
 ```
 
 #### Learn More

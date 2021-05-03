@@ -11,7 +11,8 @@ import UIKit
 
 class ViewController: UIViewController {
     // MARK: Lifecycle
-
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 13.0, *) {
@@ -39,7 +40,7 @@ class ViewController: UIViewController {
             image: UIImage(systemName: "plus.bubble.fill"),
             style: IconStyle(
                 viewStyle: .colored(.system(.blue), cornerRadius: .squircle),
-                size: IconSize.Default.lg,
+                size: IconSize.default.lg,
                 color: IconStyle.Color.tinted(.white),
                 padding: Padding.p2
             )
@@ -58,12 +59,12 @@ class ViewController: UIViewController {
             style: .with(colorStyle: .lightFillDarkText(.system(.blue)))
         )
 
-        let getStartedButton = Button(
+         let getStartedButton = Button(
             title: "Get started",
             image: UIImage(systemName: "hand.thumbsup.fill"),
             style: .with(colorStyle: .darkFillWhiteText(.system(.blue)))
         )
-
+        
         let verticalStackView = UIStackView()
         verticalStackView.distribution = .fillEqually
         verticalStackView.spacing = Padding.p4

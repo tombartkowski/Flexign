@@ -6,7 +6,7 @@
 //
 
 public extension LabelStyle {
-    enum Default {
+    enum `default` {
         public static let header1 = LabelStyle(font: .header1)
         public static let header2 = LabelStyle(font: .header2)
         public static let header3 = LabelStyle(font: .header3)

@@ -9,7 +9,7 @@ public class VerticalLabelsContent: UIView {
     // MARK: Lifecycle
 
     public init(
-        style: VerticalLabelsContentStyle = VerticalLabelsContentStyle.Default.headlineSubheadline
+        style: VerticalLabelsContentStyle = VerticalLabelsContentStyle.default.headlineSubheadline
     ) {
         self.style = style
         super.init(frame: .zero)

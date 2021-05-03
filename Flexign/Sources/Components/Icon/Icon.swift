@@ -35,6 +35,7 @@ open class Icon: UIView {
 
         imageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+       
         widthAnchor.constraint(equalToConstant: style.size).isActive = true
         heightAnchor.constraint(equalToConstant: style.size).isActive = true
 

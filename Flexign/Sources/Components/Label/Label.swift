@@ -8,7 +8,7 @@
 open class Label: UILabel {
     // MARK: Lifecycle
 
-    public init(text: String? = nil, style: LabelStyle = LabelStyle.Default.paragraph) {
+    public init(text: String? = nil, style: LabelStyle = LabelStyle.default.paragraph) {
         self.style = style
         super.init(frame: .zero)
 

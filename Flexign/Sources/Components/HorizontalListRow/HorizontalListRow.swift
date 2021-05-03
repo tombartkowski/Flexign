@@ -12,7 +12,7 @@ open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIV
         media: Media? = nil,
         content: Content? = nil,
         extra: Extra? = nil,
-        style: HorizontalListRowStyle = HorizontalListRowStyle.Default.basic
+        style: HorizontalListRowStyle = HorizontalListRowStyle.default.basic
     ) {
         self.style = style
         super.init(frame: .zero)

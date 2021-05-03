@@ -6,7 +6,7 @@
 //
 
 public enum IconSize {
-    public enum Default {
+    public enum `default` {
         public static let xs: CGFloat = 16
         public static let sm: CGFloat = 20
         public static let md: CGFloat = 24

@@ -6,6 +6,7 @@
 //
 
 public extension UIColor {
+    enum systemColors {}
     class func system(_ color: SystemColor) -> UIColor {
         switch color {
         case .red:
@@ -78,10 +79,6 @@ public extension UIColor {
             return UIColor.systemColors.opaqueSeparator
         }
     }
-}
-
-extension UIColor {
-    enum systemColors {}
 }
 
 // MARK: - SystemColor
