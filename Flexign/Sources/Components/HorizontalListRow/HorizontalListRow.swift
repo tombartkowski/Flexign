@@ -1,18 +1,18 @@
 //
-//  HorizontalListRow.swift
+//  HorizontalRowLayout.swift
 //  Flexign
 //
 //  Created by Tomasz Bartkowski on 29/04/2021.
 //
 
-open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIView {
+open class HorizontalRowLayout<Media: UIView, Content: UIView, Extra: UIView>: UIView {
     // MARK: Lifecycle
 
     public init(
         media: Media? = nil,
         content: Content? = nil,
         extra: Extra? = nil,
-        style: HorizontalListRowStyle = HorizontalListRowStyle.default.basic
+        style: HorizontalRowLayoutStyle = HorizontalRowLayoutStyle.default.basic
     ) {
         self.style = style
         super.init(frame: .zero)
@@ -32,7 +32,7 @@ open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIV
 
     // MARK: Open
 
-    open var style: HorizontalListRowStyle
+    open var style: HorizontalRowLayoutStyle
     open var media: Media?
     open var content: Content?
     open var extra: Extra?
@@ -60,7 +60,7 @@ open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIV
         separator.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
 
-    open func apply(style: HorizontalListRowStyle) {
+    open func apply(style: HorizontalRowLayoutStyle) {
         apply(style: style.viewStyle)
         separator.apply(style: style.separatorStyle)
         stackView.spacing = style.itemsSpacing
@@ -68,12 +68,13 @@ open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIV
         let leadingAnchor = anchorFor(style.leadingSeparatorPosition) ?? self.leadingAnchor
         let trailingAnchor = anchorFor(style.trailingSeparatorPosition) ?? self.trailingAnchor
 
-        separator.isHidden = style.separatorVisible
+        separator.isHidden = !style.separatorVisible
         separator.removeConstraints(
             separator.constraints
-                .filter { $0.firstAttribute != .height || $0.firstAttribute != .bottom }
+                .filter { $0.firstAttribute != .height }
         )
         separator.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        separator.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         trailingAnchor.constraint(equalTo: separator.trailingAnchor).isActive = true
     }
 
@@ -90,7 +91,7 @@ open class HorizontalListRow<Media: UIView, Content: UIView, Extra: UIView>: UIV
     // MARK: Private
 
     private func anchorFor(
-        _ separatorPosition: HorizontalListRowStyle
+        _ separatorPosition: HorizontalRowLayoutStyle
             .SeparatorPosition
     ) -> NSLayoutXAxisAnchor? {
         var anchor: NSLayoutXAxisAnchor?

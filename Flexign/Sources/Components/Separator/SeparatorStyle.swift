@@ -9,7 +9,7 @@ public struct SeparatorStyle {
     // MARK: Lifecycle
 
     public init(
-        backgroundColor: UIColor = .system(.opaqueSeparator),
+        backgroundColor: UIColor = UIColor.system(.opaqueSeparator).withAlphaComponent(0.8),
         visible: Bool = true
     ) {
         self.backgroundColor = backgroundColor

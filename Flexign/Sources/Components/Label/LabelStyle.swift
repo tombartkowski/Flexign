@@ -20,6 +20,8 @@ public struct LabelStyle {
         self.textColor = textColor
         self.numberOfLines = numberOfLines
         self.font = font
+
+
     }
 
     // MARK: Public

@@ -86,11 +86,11 @@ let icon = Icon(
   )
 )
 
-let chatRow = HorizontalListRow(
+let chatRow = HorizontalRowLayout(
   media: avatar,
   content: labelsContent,
   extra: icon,
-  style: HorizontalListRowStyle(itemsSpacing: Padding.p4)
+  style: HorizontalRowLayoutStyle(itemsSpacing: Padding.p4)
 )
 
 let noThanksButton = Button(
@@ -217,21 +217,20 @@ You can jump to the specific topic using the links below.
 
 1. [Color](Documentation/Color.md)
 2. [Typography](Documentation/Typography.md)
-3. [Spacing]()
-4. [Typography]()
-5. [Animation]()
-6. [Corner Radius]()
-7. [ViewStyle]()
+3. [Spacing](Documentation/Spacing.md)
+4. [Animation](Documentation/Animation.md)
+5. [Corner Radius](Documentation/CornerRadius.md)
+6. [ViewStyle](Documentation/ViewStyle.md)
 
 ### Components
 
-1. [Label]()
-2. [Button]()
-3. [Icon]()
-4. [Avatar]()
-5. [Separator]()
-6. [HorizontalRowLayout]()
-7. [VerticalLabelsContent]()
+1. [Label](Documentation/Label.md)
+2. [Button](Documentation/Button.md)
+3. [Icon](Documentation/Icon.md)
+4. [Avatar](Documentation/Avatar.md)
+5. [Separator](Documentation/Separator.md)
+6. [HorizontalRowLayout](Documentation/HorizontalRowLayout.md)
+7. [VerticalLabelsContent](Documentation/VerticalLabelsContent.md)
 
 ## Todo
 

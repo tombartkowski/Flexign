@@ -18,11 +18,15 @@ public extension UIButton {
             semanticContentAttribute = .forceLeftToRight
         }
 
+        guard imageView?.image != nil else {
+            contentEdgeInsets = style.size
+            return
+        }
         let factor: CGFloat = style.imageSide == .left ? 1 : -1
         imageEdgeInsets = UIEdgeInsets(
-            top: 0,
+            top: 1,
             left: -3 * factor,
-            bottom: 0,
+            bottom: -1,
             right: 3 * factor
         )
         titleEdgeInsets = UIEdgeInsets(

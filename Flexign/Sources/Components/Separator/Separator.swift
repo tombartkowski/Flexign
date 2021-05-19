@@ -14,6 +14,7 @@ open class Separator: UIView {
 
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 0.33).isActive = true
+        apply(style: style)
     }
 
     @available(*, unavailable)
@@ -29,6 +30,6 @@ open class Separator: UIView {
 
     public func apply(style: SeparatorStyle) {
         backgroundColor = style.backgroundColor
-        isHidden = style.visible
+        isHidden = !style.visible
     }
 }

@@ -1,13 +1,13 @@
 //
-//  HorizontalListRowStyle+Default.swift
+//  HorizontalRowLayoutStyle+Default.swift
 //  Flexign
 //
 //  Created by Tomasz Bartkowski on 29/04/2021.
 //
 
-public extension HorizontalListRowStyle {
+public extension HorizontalRowLayoutStyle {
     enum `default` {
-        public static let basic = HorizontalListRowStyle(
+        public static let basic = HorizontalRowLayoutStyle(
             itemsSpacing: Padding.p3,
             padding: UIEdgeInsets(
                 top: Padding.p4,

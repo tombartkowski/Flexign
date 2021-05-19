@@ -5,7 +5,7 @@
 //  Created by Tomasz Bartkowski on 28/04/2021.
 //
 
-extension UIColor.systemColors {
+public extension UIColor.systemColors {
     static var red = UIColor.systemRed
     static var orange = UIColor.systemOrange
     static var yellow = UIColor.systemYellow

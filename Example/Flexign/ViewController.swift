@@ -46,11 +46,11 @@ class ViewController: UIViewController {
             )
         )
 
-        let row = HorizontalListRow(
+        let row = HorizontalRowLayout(
             media: avatar,
             content: labelsContent,
             extra: icon,
-            style: HorizontalListRowStyle(itemsSpacing: Padding.p4, padding: .zero)
+            style: HorizontalRowLayoutStyle(itemsSpacing: Padding.p4, padding: .zero)
         )
 
         let noThanksButton = Button(

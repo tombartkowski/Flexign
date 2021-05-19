@@ -1,11 +1,11 @@
 //
-//  HorizontalListRowStyle.swift
+//  HorizontalRowLayoutStyle.swift
 //  Flexign
 //
 //  Created by Tomasz Bartkowski on 29/04/2021.
 //
 
-public struct HorizontalListRowStyle {
+public struct HorizontalRowLayoutStyle {
     // MARK: Lifecycle
 
     public init(

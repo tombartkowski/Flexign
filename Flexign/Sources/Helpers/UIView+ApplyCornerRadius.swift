@@ -5,7 +5,7 @@
 //  Created by Tomasz Bartkowski on 29/04/2021.
 //
 
-extension UIView {
+public extension UIView {
     func applyCornerRadius(_ cornerRadius: CornerRadius?) {
         guard let cornerRadius = cornerRadius else {
             if layer.cornerRadius != 0 {

@@ -5,7 +5,7 @@
 //  Created by Tomasz Bartkowski on 28/04/2021.
 //
 
-extension UIImage {
+public extension UIImage {
     func imageForSize(_ size: CGSize) -> UIImage {
         let aspectRatio = self.size.width / self.size.height
         var newSize: CGSize

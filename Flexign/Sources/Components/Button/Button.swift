@@ -40,7 +40,7 @@ open class Button: UIButton {
 
     open var style: ButtonStyle
 
-    override open var isEnabled: Bool { didSet { alpha = isEnabled ? 1 : 0.4 } }
+    override open var isEnabled: Bool { didSet { alpha = isEnabled ? 1 : 0.3 } }
 
     override open func layoutSubviews() {
         super.layoutSubviews()
