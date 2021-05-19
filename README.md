@@ -10,8 +10,11 @@
     <br />
     <br />
     <a href="#features">Features</a>
+    •
     <a href="#quick-example">Example</a>
+    •
     <a href="#usage">Usage</a>
+    •
     <a href="#installation">Installation</a>
   </p>
 </p>
